@@ -22,8 +22,21 @@
             return clientPrincipal.userDetails;
         }
 
-        const name = document.getElementById('name');
-        name.innerHTML = await this.getUserInfo();
+        function setUserDetails(details) {
+            const name = document.getElementById('name');
+            name.innerHTML = details;
+        }
+
+        getUserInfo().then(
+            function(value) {
+                setUserDetails
+                    (value)
+            },
+            function(error) {
+                setUserDetails
+                    (error)
+            }
+        );
     </script>
 </body>
 
