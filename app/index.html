@@ -19,11 +19,11 @@
             const {
                 clientPrincipal
             } = payload;
-            return clientPrincipal;
+            return clientPrincipal.userDetails;
         }
 
         const name = document.getElementById('name');
-        name.innerHTML = getUserInfo();
+        name.innerHTML = getUserInfo().user;
     </script>
 </body>
 
