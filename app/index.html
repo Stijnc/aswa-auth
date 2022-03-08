@@ -3,6 +3,13 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    
+    <h1>
+      Hi <span id='name'>there</span>, you are now authenticated! &#129327;
+    </h1>
+    <footer>
+      made with &#57378; by Stijn Callebaut
+    </footer>
     <script>
       async function getUserInfo() {
         const response = await fetch('/.auth/me');
@@ -11,15 +18,9 @@
         return clientPrincipal;
       }
 
-      var name = document.getElementById('name')
-      name.innerHTML = getUserInfo()
+      var name = document.getElementById('name');
+      name.innerHTML = getUserInfo();
 
     </script>
-    <h1>
-      Hi <span id='name'>there</span>, you are now authenticated! &#129327;
-    </h1>
-    <footer>
-      made with &#57378; by Stijn Callebaut
-    </footer>
   </body>
 </html>
