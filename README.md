@@ -2,6 +2,8 @@
 
 This repo serves as the basis to put a [full website behind authentication](https://aswauth.callebaut.dev/).
 
+<img src="assets/website.png" height="250px">
+
 ## TL;DR
 
  Hit 🔗 [https://aswauth.callebaut.dev/](https://aswauth.callebaut.dev/) to see this in action.
@@ -120,3 +122,5 @@ More information about the `direct access endpoint` can be found in the [officia
         );
 
 ```
+
+## 
