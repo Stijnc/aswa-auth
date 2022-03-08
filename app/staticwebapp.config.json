@@ -1,0 +1,51 @@
+{
+    "routes": [
+      {
+        "route": "/login",
+        "rewrite": "/.auth/login/aad",
+        "allowedRoles": ["anonymous", "authenticated"]
+      },
+      {
+        "route": "/.auth/login/github",
+        "statusCode": 404
+      },
+      {
+        "route": "/.auth/login/twitter",
+        "statusCode": 404
+      },
+      {
+        "route": "/logout",
+        "redirect": "/.auth/logout",
+        "allowedRoles": ["anonymous", "authenticated"]
+      },
+      {
+        "route": "/*",
+        "allowedRoles": ["authenticated"]
+      }
+    ],
+    "navigationFallback": {
+        "rewrite": "index.html",
+        "exclude": [
+            "/images/*.{png,jpg,gif}",
+            "/css/*"
+        ]
+    },
+    "mimeTypes": {
+        ".json": "text/json"
+    },
+    "responseOverrides": {
+      "401": {
+        "redirect": "/login",
+        "statusCode": 302
+      }
+    },
+    "globalHeaders": {
+        "content-security-policy": "upgrade-insecure-requests; block-all-mixed-content; default-src 'none'; child-src 'self'; font-src 'self'; form-action 'self'; frame-src 'self'; img-src 'self' https:; object-src 'none'; style-src 'self' 'sha256-wVxprRrVSzd1RBeEMklxqfDyXLq0qVtfffKt2PnmJps='; script-src 'self'; prefetch-src 'self'; connect-src ; base-uri 'none';frame-ancestors 'none';",
+        "cache-control": "must-revalidate, max-age=604800",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "x-frame-options": "DENY",
+        "x-Content-Type-Options": "nosniff",
+        "x-xss-Protection": "1; mode=block",
+        "Referrer-Policy": "strict-origin-when-cross-origin"
+    }
+}
