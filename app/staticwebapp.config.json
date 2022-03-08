@@ -40,7 +40,7 @@
       }
     },
     "globalHeaders": {
-        "content-security-policy": "upgrade-insecure-requests; block-all-mixed-content; default-src 'none'; child-src 'self'; font-src 'self'; form-action 'self'; frame-src 'self'; img-src 'self' https:; object-src 'none'; style-src 'self' 'sha256-wVxprRrVSzd1RBeEMklxqfDyXLq0qVtfffKt2PnmJps='; script-src 'self'; prefetch-src 'self'; connect-src ; base-uri 'none';frame-ancestors 'none';",
+        "content-security-policy": "upgrade-insecure-requests; block-all-mixed-content; default-src 'none'; child-src 'self'; font-src 'self'; form-action 'self'; frame-src 'self'; img-src 'self' https:; object-src 'none'; style-src 'self' 'sha256-wVxprRrVSzd1RBeEMklxqfDyXLq0qVtfffKt2PnmJps='; script-src 'self' 'sha256-v3MePviywgjzn4zwqHOcDSVSaobnbHwi9gEd6Su7X4o='; prefetch-src 'self'; connect-src ; base-uri 'none';frame-ancestors 'none';",
         "cache-control": "must-revalidate, max-age=604800",
         "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
         "x-frame-options": "DENY",
